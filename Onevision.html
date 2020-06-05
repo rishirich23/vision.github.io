@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONE VISION </title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        
+
+        body {
+            background-color: black;
+            color: blanchedalmond;
+            height: 100%;
+            width: 100%;
+            
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .card {
+            padding: 20px;
+            border: 2px solid lightskyblue;
+            margin: auto;
+            /* box-shadow: 12px 22px 34px darkblue; */
+            /* box-shadow: inset 12px 20px 34px darkblue; */
+            /* inset is used to give shadow inside the box */
+            /* box-shadow: x y blur spread; */
+            border-radius: 5px;
+            transition-property: all;
+            transition-duration: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            border-radius: 30px;
+        }
+
+        .shop:hover {
+            transform: scale(1.1);
+            border-radius: 30px;
+        }
+
+        .food:hover {
+            transform: scale(1.1);
+            border-radius: 30px;
+        }
+
+        #card-1 {
+            text-shadow: 3px 4px 10px slateblue;
+            box-shadow: 12px 20px 30px rgb(4, 162, 224);
+            border: 2px solid rgb(4, 162, 224);
+        }
+
+        #card-1 h2 {
+            text-shadow: 10px 12px 30px blue;
+        }
+
+        #card-2 {
+            text-shadow: 10px 12px 30px lightpink;
+            box-shadow: 12px 20px 30px rgb(172, 32, 78);
+            border: 2px solid rgb(172, 32, 78);
+        }
+
+        #card-2 h2 {
+            text-shadow: 3px 4px 30px palevioletred;
+        }
+
+        #card-3 {
+            text-shadow: 3px 4px 10px skyblue;
+            box-shadow: 12px 20px 30px lightblue;
+            border: 2px solid lightblue;
+        }
+
+        #card-3 h2 {
+            text-shadow: 3px 4px 30px skyblue;
+        }
+
+        #card-4 {
+            text-shadow: 3px 4px 10px green;
+            box-shadow: 12px 20px 30px lightgreen;
+            border: 2px solid lightgreen;
+        }
+
+        #card-4 h2 {
+            text-shadow: 3px 4px 30px chartreuse;
+        }
+
+        .head {
+            border: 2px solid whitesmoke;
+            text-align: center;
+            box-shadow: 2px 18px 30px snow;
+        }
+
+        .market {
+            display: flex;
+        }
+
+        .shop {
+            border: 2px solid black;
+            padding: 20px;
+            margin: auto;
+            cursor: pointer;
+            border-radius: 5px;
+            transition-property: all;
+            transition-duration: 0.3s;
+        }
+
+        #shop-1 {
+            text-shadow: 3px 4px 10px orange;
+            box-shadow: 8px 20px 30px orangered;
+            border: 2px solid orangered;
+        }
+
+        #shop-1 h2 {
+            text-shadow: 3px 4px 30px orangered;
+        }
+
+        #shop-2 {
+            text-shadow: 3px 4px 10px yellow;
+            box-shadow: 8px 20px 30px darkgoldenrod;
+            border: 2px solid darkgoldenrod;
+        }
+
+        #shop-2 h2 {
+            text-shadow: 3px 4px 30px darkgoldenrod;
+        }
+
+        #shop-3 {
+            text-shadow: 3px 4px 10px red;
+            box-shadow: 8px 20px 30px darkred;
+            border: 2px solid darkred;
+        }
+
+        #shop-3 h2 {
+            text-shadow: 3px 4px 30px darkred;
+        }
+
+        #shop-4 {
+            text-shadow: 3px 4px 10px whitesmoke;
+            box-shadow: 8px 20px 30px wheat;
+            border: 2px solid wheat;
+        }
+
+        #shop-1 h2 {
+            text-shadow: 3px 4px 30px wheat;
+        }
+
+        .eat {
+            display: flex;
+        }
+
+        .food {
+            border: 2px solid darkslategrey;
+            margin: auto;
+            padding: 20px;
+            border-radius: 5px;
+            transition-property: all;
+            transition-duration: 0.3s;
+        }
+
+        #food-1 {
+            border: 2px solid lightcoral;
+            box-shadow: 12px 20px 30px lightcoral;
+            text-shadow: 3px 4px 10px red;
+        }
+
+        #food-1 h2 {
+            text-shadow: 3px 4px 30px lightcoral;
+        }
+
+        #food-2 {
+            border: 2px solid skyblue;
+            box-shadow: 12px 20px 30px skyblue;
+            text-shadow: 3px 4px 10px blue;
+        }
+
+        #food-2 h2 {
+            text-shadow: 3px 4px 30px skyblue;
+        }
+
+        #food-3 {
+            border: 2px solid orangered;
+            box-shadow: 12px 20px 30px orangered;
+            text-shadow: 3px 4px 10px orange;
+        }
+
+        #food-3 h2 {
+            text-shadow: 3px 4px 30px orangered;
+        }
+
+        #food-4 {
+            border: 2px solid goldenrod;
+            box-shadow: 12px 20px 30px goldenrod;
+            text-shadow: 3px 4px 10px gold;
+        }
+
+        #food-4 h2 {
+            text-shadow: 3px 4px 30px goldenrod;
+        }
+
+        header h1 {
+            font-size: 100px;
+            text-align: center;
+            text-shadow: 0px 35px 10px goldenrod;
+            opacity: 110%;
+        }
+
+        .h {
+            text-align: center;
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        .img1 {
+            margin-left: 400px;
+        }
+
+        header h1:hover {
+            text-shadow: 0 30px 50px 20px goldenrod;
+        }
+        .n ul {
+            display: flex;
+            padding: 12px;
+            margin: 13px;
+            justify-content: center;
+        }
+        .n ul li{
+            padding: 30px;
+        }
+        .n ul li a{
+            color: black;
+            background-color: goldenrod;
+            border: 4px solid goldenrod;
+            border-radius: 40px;
+            padding: 20px;
+            margin: auto;    
+
+        }
+        
+        
+        .item{
+            display: flex;
+            padding: 30px;
+            
+            font-size: 19px;
+            transition: all;
+            transition-duration: 1s;
+        }
+        
+        
+    </style>
+    <link rel="stylesheet" media="screen and (max-width: 1235px)" href="phone.css">
+</head>
+
+<body>
+    
+    <div class="img1">
+        <img src="earth.jpg" alt="">
+    </div>
+    <header>
+        <h1>EXPLORE</h1>
+        <div class="h">
+            ALL YOUR WORLD IN ONE PLACE
+        </div>
+    </header>
+    <br>
+    <nav class="n">
+        <ul>
+            <li class="item"><a href="#s">Social-media</a></li>
+            <li class="item"><a href="#m">Shopping</a></li>
+            <li class="item"><a href="#f">Food</a></li>
+            
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <div class="head" id="s">
+        <h1>SOCIAL MEDIA</h1>
+    </div>
+    <br>
+    <br>
+    <div class="container" id="s">
+        <div class="card" id="card-1">
+            <a href="http://www.facebook.com" target="blank">
+                <h2>Facebook</h2>
+                <p>
+                    <img src="f.png" alt="">
+                </p>
+            </a>
+        </div>
+        <div class="card" id="card-2">
+            <a href="http://www.instagram.com" target="blank">
+                <h2>Instagram</h2>
+                <p><img src="i1.jpg" alt=""></p>
+            </a>
+        </div>
+        <div class="card" id="card-4">
+            <a href="http://www.whatsapp.com" target="blank">
+                <h2>Whatsapp</h2>
+                <p><img src="w.jpg" alt="">
+                </p>
+            </a>
+        </div>
+        <div class="card" id="card-3">
+            <a href="http://www.twitter.com" target="blank">
+                <h2>Twitter</h2>
+                <p><img src="t.png" alt=""></p>
+            </a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="head" id="m">
+        <h1>SHOPPING</h1>
+    </div>
+    <br>
+    <br>
+    <div class="market" id="m">
+        <div class="shop" id="shop-1">
+            <a href="http://www.amazon.in" target="blank">
+                <h2>Amazon</h2>
+                <p><img src="a.jpg" alt=""></p>
+            </a>
+        </div>
+        <div class="shop" id="shop-2">
+            <a href="http://www.flipkart.com" target="blank">
+                <h2>Flipkart</h2>
+                <p><img src="f.jpg" alt=""></p>
+            </a>
+        </div>
+        <div class="shop" id="shop-3">
+            <a href="http://www.snapdeal.com" target="blank">
+                <h2>Snapdeal</h2>
+                <p><img src="s.png" alt=""></p>
+            </a>
+        </div>
+        <div class="shop" id="shop-4">
+            <a href="http://www.zara.com" target="blank">
+                <h2>Zara</h2>
+                <p>
+                    <img src="z.png" alt="">
+                </p>
+            </a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="head" id="f">
+        <h1>FOOD</h1>
+    </div>
+    <br>
+    <br>
+    <div class="eat" id="f">
+        <div class="food" id="food-1">
+            <a href="http://zomato.com" target="blank">
+                <h2>Zomato</h2>
+                <p>
+                    <img src="zo.jpg" alt="">
+                </p>
+            </a>
+        </div>
+        <div class="food" id="food-2">
+            <a href="http://www.dominos.com" target="blank">
+                <h2>Domino's</h2>
+                <p><img src="do.png" alt=""></p>
+            </a>
+        </div>
+        <div class="food" id="food-3">
+            <a href="http://www.swiggy.com" target="blank">
+                <h2>Swiggy</h2>
+                <p><img src="sw2.jpg" alt=""></p>
+            </a>
+        </div>
+        <div class="food" id="food-4">
+            <a href="http://www.burgerkingindia.in" target="blank">
+                <h2>Burgerking</h2>
+                <p><img src="b.png" alt=""></p>
+            </a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="head">
+       <h2>
+        COMING SOON MORE...
+       </h2>
+    </div>
+
+</body>
+
+</html>
